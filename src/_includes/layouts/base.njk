@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   {# Dynamic Page Title #}
-  <title>{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.siteTitle }}{% endif %}</title>
+  <title>{{ site.siteTitle }}</title>
   
   {# Meta Description #}
-  <meta name="description" content="{{ description or site.description }}">
+  <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author.name }}">
   <meta name="robots" content="index, follow">
 
   {# Canonical URL #}
   {% if site.url %}
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}/">
   {% endif %}
 
   {# Open Graph / Social Sharing #}
-  <meta property="og:type" content="{% if tags and 'project' in tags %}article{% else %}website{% endif %}">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.siteTitle }}{% endif %}">
-  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:title" content="{{ site.siteTitle }}">
+  <meta property="og:description" content="{{ site.description }}">
   {% if site.url %}
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  {% endif %}
-  {% if thumbnail %}
-    <meta property="og:image" content="{{ site.url }}{{ thumbnail | url }}">
+    <meta property="og:url" content="{{ site.url }}/">
   {% endif %}
 
   {# Twitter Card #}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.siteTitle }}{% endif %}">
-  <meta name="twitter:description" content="{{ description or site.description }}">
+  <meta name="twitter:title" content="{{ site.siteTitle }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+
+  {# Google Fonts: Newsreader & Inter #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 
   {# Stylesheet #}
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  {# Minimal Favicon (inline SVG) #}
+  {# Minimal Favicon #}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
-<body>
+<body id="top">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   {% include "components/header.njk" %}
 
-  <main id="main-content">
+  <main id="main-content" class="canvas-container">
     {{ content | safe }}
   </main>
 

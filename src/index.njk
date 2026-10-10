@@ -1,153 +1,152 @@
 ---
 layout: layouts/base.njk
-title: "Home"
+title: "Abhishek Dahal — Web Developer"
+permalink: "/"
 ---
 
-{# Hero / Introduction Section #}
-<section class="section hero" aria-labelledby="hero-title">
-  <div class="container">
-    <div class="hero__eyebrow">
-      <span>{{ site.title }}</span>
+{# =========================================================================
+   1. HERO SECTION
+   ========================================================================= #}
+<section class="editorial-section" aria-labelledby="hero-title">
+  <div class="hero-content">
+    <div class="eyebrow">
+      <span class="dot-cobalt" aria-hidden="true"></span>
+      <span>{{ site.hero.eyebrow }}</span>
     </div>
 
-    <h1 id="hero-title" class="hero__title">
-      Hi, I'm {{ site.name }}.
+    <h1 id="hero-title" class="hero-headline">
+      {{ site.hero.headline }}
     </h1>
 
-    <p class="hero__lead">
-      {{ site.intro.lead }}
+    <p class="hero-lead">
+      {{ site.hero.lead }}
     </p>
 
-    <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 44rem; margin-bottom: 2rem; line-height: 1.6;">
-      {{ site.intro.sub }}
-    </p>
+    <div class="hero-actions-row">
+      <a href="#work" class="hero-link">
+        <span>Explore my work</span>
+        <span aria-hidden="true">↓</span>
+      </a>
 
-    <div class="hero__actions">
-      <a href="/projects/" class="btn btn--primary">
-        Explore Projects &rarr;
+      <a href="#contact" class="hero-link hero-link--cobalt">
+        <span>Get in touch</span>
+        <span aria-hidden="true">↗</span>
       </a>
-      <a href="/about/" class="btn btn--secondary">
-        About My Background
-      </a>
-      <a href="{{ site.author.linkedIn }}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-        LinkedIn &#8599;
-      </a>
+
+      <div class="hero-status-tag">
+        <span class="dot-green" aria-hidden="true"></span>
+        <span>{{ site.hero.status }}</span>
+      </div>
     </div>
   </div>
 </section>
 
-{# Featured Projects Section #}
-<section class="section section--alt" aria-labelledby="featured-projects-title">
-  <div class="container">
-    <div class="section-header section-header--split">
-      <div>
-        <h2 id="featured-projects-title">Featured Projects</h2>
-        <p class="section-subtitle">Selected case studies demonstrating technical execution and CMS structure.</p>
-      </div>
-      <div>
-        <a href="/projects/" class="btn btn--secondary btn--sm">
-          View All Projects &rarr;
-        </a>
-      </div>
+{# =========================================================================
+   2. SELECTED WORK SECTION
+   ========================================================================= #}
+<section id="work" class="editorial-section" aria-labelledby="work-title">
+  <div class="section-intro-bar">
+    <div>
+      <span class="eyebrow">Selected work</span>
+      <h2 id="work-title" class="section-headline">Recent Projects</h2>
     </div>
+    <p class="section-summary-text">
+      A selection of projects across websites, e-commerce and digital content.
+    </p>
+  </div>
 
-    <div class="projects-grid">
-      {% for project in collections.featuredProjects %}
-        {% include "components/project-card.njk" %}
-      {% else %}
-        <p style="grid-column: 1 / -1; color: var(--text-muted); font-style: italic;">
-          No featured projects marked yet. Add <code>featured: true</code> to project front matter.
-        </p>
-      {% endfor %}
-    </div>
+  <div class="work-grid">
+    {% for project in collections.projects %}
+      {% include "components/project-card.njk" %}
+    {% endfor %}
   </div>
 </section>
 
-{# Technical Skills Overview #}
-<section class="section" aria-labelledby="skills-overview-title">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="skills-overview-title">Technical Capabilities</h2>
-      <p class="section-subtitle">Tools, CMS platforms, and infrastructure practices I rely on.</p>
+{# =========================================================================
+   3. ABOUT SECTION (Narrative + Structured Skills Matrix)
+   ========================================================================= #}
+<section id="about" class="editorial-section" aria-labelledby="about-title">
+  <div class="about-grid">
+    <!-- Left Column: Narrative -->
+    <div class="about-narrative">
+      <span class="eyebrow">{{ site.about.heading }}</span>
+      <h2 id="about-title" class="about-headline">{{ site.about.leadHeading }}</h2>
+      <p class="about-text">
+        {{ site.about.text }}
+      </p>
     </div>
 
-    <div class="skills-grid">
-      {% for group in site.skills %}
-        <div class="skill-card">
-          <h3 class="skill-card__title">{{ group.category }}</h3>
-          <ul class="skill-card__list">
-            {% for item in group.items %}
-              <li><span class="tag">{{ item }}</span></li>
-            {% endfor %}
-          </ul>
+    <!-- Right Column: Skills Matrix -->
+    <div class="skills-matrix" aria-label="Technical skill areas">
+      {% for skill in site.skills %}
+        <div class="skills-row">
+          <span class="skills-cat-label">{{ skill.category }}</span>
+          <p class="skills-cat-items">{{ skill.items }}</p>
         </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-{# Practical Experience Highlights #}
-<section class="section section--alt" aria-labelledby="experience-highlights-title">
-  <div class="container">
-    <div class="section-header section-header--split">
-      <div>
-        <h2 id="experience-highlights-title">Experience Highlights</h2>
-        <p class="section-subtitle">Practical work across agencies, digital platforms, and production systems.</p>
-      </div>
-      <div>
-        <a href="/about/" class="btn btn--secondary btn--sm">
-          Full Background &rarr;
-        </a>
-      </div>
-    </div>
+{# =========================================================================
+   4. EXPERIENCE SECTION
+   ========================================================================= #}
+<section id="experience" class="editorial-section" aria-labelledby="experience-title">
+  <div class="experience-max">
+    <span class="eyebrow">Where I've worked</span>
+    <h2 id="experience-title" class="section-headline" style="margin-bottom: 2.5rem;">Work Experience</h2>
 
-    <div class="timeline">
-      {# Display the top 2 roles on home page #}
-      {% for job in site.experience.slice(0, 2) %}
-        <article class="timeline-item">
-          <div class="timeline-item__header">
-            <div>
-              <span class="timeline-item__role">{{ job.role }}</span>
-              <span style="color: var(--text-muted);"> &bull; </span>
-              <strong class="timeline-item__company">{{ job.company }}</strong>
-            </div>
-            <span class="timeline-item__period">{{ job.period }}</span>
+    <div class="experience-list">
+      {% for job in site.experience %}
+        <article class="experience-item">
+          <div>
+            <h3 class="experience-company">{{ job.company }}</h3>
+            <p class="experience-role">{{ job.role }}</p>
           </div>
-          <p class="timeline-item__summary">{{ job.summary }}</p>
-          <ul class="timeline-item__bullets">
-            {% for bullet in job.highlights.slice(0, 3) %}
-              <li>{{ bullet }}</li>
-            {% endfor %}
-          </ul>
+          <div>
+            <p class="experience-desc">{{ job.description }}</p>
+          </div>
         </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-{# Contact Section #}
-<section class="section" aria-labelledby="contact-home-title">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="contact-home-title">Get In Touch</h2>
-      <p class="section-subtitle">Have a project, opportunity, or question? Feel free to reach out directly.</p>
-    </div>
+{# =========================================================================
+   5. CONTACT SECTION
+   ========================================================================= #}
+<section id="contact" class="editorial-section" style="border-bottom: none;" aria-labelledby="contact-title">
+  <div class="contact-banner">
+    <div class="contact-content">
+      <div class="eyebrow">
+        <span class="dot-cobalt" aria-hidden="true"></span>
+        <span>Direct Channels</span>
+      </div>
 
-    <div class="contact-grid">
-      <a href="mailto:{{ site.author.email }}" class="contact-card">
-        <span class="contact-card__label">Email</span>
-        <span class="contact-card__value">{{ site.author.email }}</span>
-      </a>
+      <h2 id="contact-title" class="contact-headline">
+        {{ site.contact.headline }}
+      </h2>
 
-      <a href="{{ site.author.linkedIn }}" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <span class="contact-card__label">LinkedIn</span>
-        <span class="contact-card__value">Connect on LinkedIn &#8599;</span>
-      </a>
+      <p class="contact-text">
+        {{ site.contact.text }}
+      </p>
 
-      <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <span class="contact-card__label">GitHub</span>
-        <span class="contact-card__value">github.com/abhishekdahal464 &#8599;</span>
-      </a>
+      <div class="contact-buttons-row">
+        <a href="mailto:{{ site.author.email }}" class="btn-contact btn-contact--primary">
+          <span>{{ site.author.emailDisplay }}</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a href="{{ site.author.linkedIn }}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-contact--outline">
+          <span>LinkedIn</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-contact--outline">
+          <span>GitHub</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
