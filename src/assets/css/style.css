@@ -490,32 +490,29 @@ a {
 .work-card-footer {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
   padding-top: 1.25rem;
   margin-top: 1.25rem;
   border-top: 1px solid var(--border-rule);
-  font-size: 0.875rem;
-  font-weight: 500;
 }
 
 .card-link {
-  color: var(--text-on-surface);
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  transition: color var(--transition-fast);
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-rule);
+  background-color: var(--bg-surface);
+  color: var(--text-on-surface);
+  transition: all var(--transition-fast);
 }
 
 .card-link:hover {
+  border-color: var(--accent-cobalt);
   color: var(--accent-cobalt);
-}
-
-.card-link--secondary {
-  color: var(--text-secondary);
-}
-
-.card-link--secondary:hover {
-  color: var(--accent-cobalt);
+  background-color: rgba(26, 86, 219, 0.04);
 }
 
 /* About Section (12-Column Editorial Grid) */

@@ -47,29 +47,11 @@
     </div>
   </div>
 
-  <!-- Bottom Links -->
+  <!-- Bottom Links: Only Live Preview as requested -->
   <div class="work-card-footer">
     {% if project.data.liveUrl %}
-      <a href="{{ project.data.liveUrl }}" class="card-link" {% if project.data.liveUrl.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
-        {{ project.data.liveUrlLabel or "Live Preview ↗" }}
-      </a>
-    {% endif %}
-
-    {% if project.data.sourceUrl %}
-      <a href="{{ project.data.sourceUrl }}" class="card-link card-link--secondary" target="_blank" rel="noopener noreferrer">
-        {{ project.data.sourceUrlLabel or "Source Code ↗" }}
-      </a>
-    {% endif %}
-
-    {% if project.data.caseUrl %}
-      <a href="{{ project.data.caseUrl }}" class="card-link card-link--secondary">
-        {{ project.data.caseUrlLabel or "Case Details ↗" }}
-      </a>
-    {% endif %}
-
-    {% if project.data.archUrl %}
-      <a href="{{ project.data.archUrl }}" class="card-link card-link--secondary">
-        {{ project.data.archUrlLabel or "Architecture Notes ↗" }}
+      <a href="{{ project.data.liveUrl }}" class="card-link" target="_blank" rel="noopener noreferrer">
+        Live Preview ↗
       </a>
     {% endif %}
   </div>

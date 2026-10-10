@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCrisp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141413"/>
+      <stop offset="100%" stop-color="#242320"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgCrisp)"/>
+  
+  <!-- Subtle Grid & Geometry -->
+  <circle cx="400" cy="225" r="160" fill="none" stroke="#363532" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="400" cy="225" r="90" fill="#1c1b18" stroke="#484742" stroke-width="1"/>
+  
+  <!-- Wordmark -->
+  <text x="400" y="220" font-family="'Inter', -apple-system, sans-serif" font-size="28" font-weight="700" fill="#faf8f5" text-anchor="middle" letter-spacing="4">CRISP STORIES</text>
+  <text x="400" y="248" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a8a59e" text-anchor="middle" letter-spacing="2">BRANDING · CREATIVE · STRATEGY</text>
+
+  <!-- Tagline badge -->
+  <rect x="310" y="310" width="180" height="26" rx="13" fill="#2a2925" stroke="#3a3834" stroke-width="1"/>
+  <text x="400" y="327" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="500" fill="#d4d0c7" text-anchor="middle" letter-spacing="1">BUILT WITH WEBFLOW</text>
+</svg>
