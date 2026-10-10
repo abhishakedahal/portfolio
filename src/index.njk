@@ -1,0 +1,153 @@
+---
+layout: layouts/base.njk
+title: "Home"
+---
+
+{# Hero / Introduction Section #}
+<section class="section hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero__eyebrow">
+      <span>{{ site.title }}</span>
+    </div>
+
+    <h1 id="hero-title" class="hero__title">
+      Hi, I'm {{ site.name }}.
+    </h1>
+
+    <p class="hero__lead">
+      {{ site.intro.lead }}
+    </p>
+
+    <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 44rem; margin-bottom: 2rem; line-height: 1.6;">
+      {{ site.intro.sub }}
+    </p>
+
+    <div class="hero__actions">
+      <a href="/projects/" class="btn btn--primary">
+        Explore Projects &rarr;
+      </a>
+      <a href="/about/" class="btn btn--secondary">
+        About My Background
+      </a>
+      <a href="{{ site.author.linkedIn }}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+        LinkedIn &#8599;
+      </a>
+    </div>
+  </div>
+</section>
+
+{# Featured Projects Section #}
+<section class="section section--alt" aria-labelledby="featured-projects-title">
+  <div class="container">
+    <div class="section-header section-header--split">
+      <div>
+        <h2 id="featured-projects-title">Featured Projects</h2>
+        <p class="section-subtitle">Selected case studies demonstrating technical execution and CMS structure.</p>
+      </div>
+      <div>
+        <a href="/projects/" class="btn btn--secondary btn--sm">
+          View All Projects &rarr;
+        </a>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      {% for project in collections.featuredProjects %}
+        {% include "components/project-card.njk" %}
+      {% else %}
+        <p style="grid-column: 1 / -1; color: var(--text-muted); font-style: italic;">
+          No featured projects marked yet. Add <code>featured: true</code> to project front matter.
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Technical Skills Overview #}
+<section class="section" aria-labelledby="skills-overview-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="skills-overview-title">Technical Capabilities</h2>
+      <p class="section-subtitle">Tools, CMS platforms, and infrastructure practices I rely on.</p>
+    </div>
+
+    <div class="skills-grid">
+      {% for group in site.skills %}
+        <div class="skill-card">
+          <h3 class="skill-card__title">{{ group.category }}</h3>
+          <ul class="skill-card__list">
+            {% for item in group.items %}
+              <li><span class="tag">{{ item }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Practical Experience Highlights #}
+<section class="section section--alt" aria-labelledby="experience-highlights-title">
+  <div class="container">
+    <div class="section-header section-header--split">
+      <div>
+        <h2 id="experience-highlights-title">Experience Highlights</h2>
+        <p class="section-subtitle">Practical work across agencies, digital platforms, and production systems.</p>
+      </div>
+      <div>
+        <a href="/about/" class="btn btn--secondary btn--sm">
+          Full Background &rarr;
+        </a>
+      </div>
+    </div>
+
+    <div class="timeline">
+      {# Display the top 2 roles on home page #}
+      {% for job in site.experience.slice(0, 2) %}
+        <article class="timeline-item">
+          <div class="timeline-item__header">
+            <div>
+              <span class="timeline-item__role">{{ job.role }}</span>
+              <span style="color: var(--text-muted);"> &bull; </span>
+              <strong class="timeline-item__company">{{ job.company }}</strong>
+            </div>
+            <span class="timeline-item__period">{{ job.period }}</span>
+          </div>
+          <p class="timeline-item__summary">{{ job.summary }}</p>
+          <ul class="timeline-item__bullets">
+            {% for bullet in job.highlights.slice(0, 3) %}
+              <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Contact Section #}
+<section class="section" aria-labelledby="contact-home-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="contact-home-title">Get In Touch</h2>
+      <p class="section-subtitle">Have a project, opportunity, or question? Feel free to reach out directly.</p>
+    </div>
+
+    <div class="contact-grid">
+      <a href="mailto:{{ site.author.email }}" class="contact-card">
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__value">{{ site.author.email }}</span>
+      </a>
+
+      <a href="{{ site.author.linkedIn }}" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <span class="contact-card__label">LinkedIn</span>
+        <span class="contact-card__value">Connect on LinkedIn &#8599;</span>
+      </a>
+
+      <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <span class="contact-card__label">GitHub</span>
+        <span class="contact-card__value">github.com/abhishekdahal464 &#8599;</span>
+      </a>
+    </div>
+  </div>
+</section>

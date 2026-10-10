@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {# Dynamic Page Title #}
+  <title>{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.siteTitle }}{% endif %}</title>
+  
+  {# Meta Description #}
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="robots" content="index, follow">
+
+  {# Canonical URL #}
+  {% if site.url %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+
+  {# Open Graph / Social Sharing #}
+  <meta property="og:type" content="{% if tags and 'project' in tags %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.siteTitle }}{% endif %}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  {% if site.url %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  {% if thumbnail %}
+    <meta property="og:image" content="{{ site.url }}{{ thumbnail | url }}">
+  {% endif %}
+
+  {# Twitter Card #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.siteTitle }}{% endif %}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+
+  {# Stylesheet #}
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  {# Minimal Favicon (inline SVG) #}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  {% include "components/header.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "components/footer.njk" %}
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

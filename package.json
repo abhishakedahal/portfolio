@@ -1,0 +1,23 @@
+{
+  "name": "abhishek-dahal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Abhishek Dahal, built with Eleventy (11ty) and ready for GitHub Pages.",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "portfolio",
+    "static-site-generator",
+    "github-pages"
+  ],
+  "author": "Abhishek Dahal",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

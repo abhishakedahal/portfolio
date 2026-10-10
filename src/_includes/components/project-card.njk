@@ -1,0 +1,68 @@
+<article class="project-card">
+  <div class="project-card__thumbnail-wrapper">
+    {% if project.data.thumbnail %}
+      <img
+        src="{{ project.data.thumbnail }}"
+        alt="{{ project.data.thumbnailAlt or project.data.title }}"
+        class="project-card__thumbnail"
+        loading="lazy"
+        width="600"
+        height="375"
+        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'project-card__fallback-thumbnail\'><span class=\'project-card__fallback-icon\'>📁</span><span>Case Study</span></div>';"
+      />
+    {% else %}
+      <div class="project-card__fallback-thumbnail">
+        <span class="project-card__fallback-icon">📁</span>
+        <span>Case Study Preview</span>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="project-card__content">
+    <div class="project-card__meta-bar">
+      <span>{{ project.data.role or "Web Development" }}</span>
+      {% if project.data.confidential %}
+        <span class="tag tag--confidential">Confidential</span>
+      {% elif project.data.date %}
+        <time datetime="{{ project.data.date }}">{{ project.data.date | readableDate }}</time>
+      {% endif %}
+    </div>
+
+    <h3 class="project-card__title">
+      <a href="{{ project.url }}">
+        {{ project.data.title }}
+      </a>
+    </h3>
+
+    <p class="project-card__desc">
+      {{ project.data.description }}
+    </p>
+
+    {% if project.data.technologies and project.data.technologies.length > 0 %}
+      <div class="project-card__tags" aria-label="Technologies used">
+        {% for tech in project.data.technologies %}
+          <span class="tag">{{ tech }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="project-card__footer">
+      <a href="{{ project.url }}" class="btn btn--secondary btn--sm">
+        View Case Study &rarr;
+      </a>
+
+      <div class="project-card__links">
+        {% if project.data.liveUrl and not project.data.confidential %}
+          <a href="{{ project.data.liveUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Live site for {{ project.data.title }}">
+            Live Site &#8599;
+          </a>
+        {% endif %}
+        {% if project.data.sourceUrl and not project.data.confidential %}
+          <a href="{{ project.data.sourceUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Source code for {{ project.data.title }}">
+            Code &#8599;
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

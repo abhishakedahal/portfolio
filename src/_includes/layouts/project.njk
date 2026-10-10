@@ -1,0 +1,106 @@
+---
+layout: layouts/base.njk
+---
+<article class="project-detail">
+  <div class="project-header">
+    <div class="container container--narrow">
+      <a href="/projects/" class="project-back-link">
+        &larr; Back to all projects
+      </a>
+
+      <h1 class="project-header__title">{{ title }}</h1>
+      
+      {% if description %}
+        <p class="project-header__lead">{{ description }}</p>
+      {% endif %}
+
+      {# Structured Project Metadata Grid #}
+      <div class="project-meta-grid">
+        {% if role %}
+          <div class="project-meta-item">
+            <div class="project-meta-item__label">Role</div>
+            <div class="project-meta-item__value">{{ role }}</div>
+          </div>
+        {% endif %}
+
+        {% if date %}
+          <div class="project-meta-item">
+            <div class="project-meta-item__label">Date</div>
+            <div class="project-meta-item__value">{{ date | readableDate }}</div>
+          </div>
+        {% endif %}
+
+        {% if status %}
+          <div class="project-meta-item">
+            <div class="project-meta-item__label">Status</div>
+            <div class="project-meta-item__value">
+              {% if confidential %}
+                <span class="tag tag--confidential">Confidential</span>
+              {% else %}
+                {{ status }}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if liveUrl and not confidential %}
+          <div class="project-meta-item">
+            <div class="project-meta-item__label">Live Demo</div>
+            <div class="project-meta-item__value">
+              <a href="{{ liveUrl }}" target="_blank" rel="noopener noreferrer">Visit Website &#8599;</a>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if sourceUrl and not confidential %}
+          <div class="project-meta-item">
+            <div class="project-meta-item__label">Repository</div>
+            <div class="project-meta-item__value">
+              <a href="{{ sourceUrl }}" target="_blank" rel="noopener noreferrer">View Source &#8599;</a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if technologies and technologies.length > 0 %}
+        <div style="margin-bottom: 2rem;">
+          <div class="project-meta-item__label" style="margin-bottom: 0.5rem;">Technologies & Tools</div>
+          <div class="project-card__tags">
+            {% for tech in technologies %}
+              <span class="tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="case-study">
+    <div class="container container--narrow">
+      {% if thumbnail %}
+        <div class="project-hero-image">
+          <img
+            src="{{ thumbnail }}"
+            alt="{{ thumbnailAlt or title }}"
+            loading="eager"
+            width="800"
+            height="480"
+          />
+        </div>
+      {% endif %}
+
+      <div class="case-study-body">
+        {{ content | safe }}
+      </div>
+
+      <div style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <a href="/projects/" class="btn btn--secondary">
+          &larr; Back to all projects
+        </a>
+        <a href="/contact/" class="btn btn--primary">
+          Get in touch &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

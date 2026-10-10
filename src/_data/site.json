@@ -1,0 +1,133 @@
+{
+  "name": "Abhishek Dahal",
+  "title": "Web Developer & Digital Solutions Specialist",
+  "siteTitle": "Abhishek Dahal | Web Developer Portfolio",
+  "description": "Personal portfolio of Abhishek Dahal, a web developer with practical experience in WordPress, Webflow, front-end development, website hosting, and digital project delivery.",
+  "url": "https://abhishekdahal464.github.io",
+  "author": {
+    "name": "Abhishek Dahal",
+    "email": "abhishekdahal464@gmail.com",
+    "phone": "07833498993",
+    "location": "London, UK (Open to relocate)",
+    "linkedIn": "https://linkedin.com/in/abhishekdahal464/",
+    "github": "https://github.com/abhishekdahal464"
+  },
+  "intro": {
+    "lead": "I build, maintain, and optimize practical, reliable web experiences.",
+    "sub": "With hands-on experience at Pagoda Labs and ThemeGrill, I work across technical implementation (WordPress, Webflow, modern frontend), website hosting, DNS, database configuration, and content management to deliver seamless digital projects."
+  },
+  "navigation": [
+    { "label": "Home", "url": "/" },
+    { "label": "Projects", "url": "/projects/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Contact", "url": "/contact/" }
+  ],
+  "socialLinks": [
+    { "label": "Email", "url": "mailto:abhishekdahal464@gmail.com", "icon": "email" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/abhishekdahal464/", "icon": "linkedin" },
+    { "label": "GitHub", "url": "https://github.com/abhishekdahal464", "icon": "github" }
+  ],
+  "footer": {
+    "text": "Crafted with Eleventy (11ty). Clean, lightweight & statically generated for GitHub Pages.",
+    "copyright": "Abhishek Dahal. All rights reserved."
+  },
+  "skills": [
+    {
+      "category": "Web & Platforms",
+      "items": ["WordPress", "Webflow", "OpenCart", "WooCommerce", "HTML5 / Semantic HTML", "CSS3 / SCSS", "JavaScript", "PHP", "Node.js"]
+    },
+    {
+      "category": "Hosting & Infrastructure",
+      "items": ["Linode Server Setup", "DNS Configuration", "Database Management", "Google Cloud Platform", "Firebase", "Website Migration"]
+    },
+    {
+      "category": "Tools & Workflow",
+      "items": ["Git & GitHub", "Jira", "Figma", "Gulp", "SEO Best Practices", "AI-Assisted Development"]
+    },
+    {
+      "category": "Data & Analytics",
+      "items": ["Python", "SQL", "R", "Databricks", "Data Cleaning & Reporting"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Frontend Developer",
+      "company": "Pagoda Labs",
+      "location": "Kathmandu, Nepal",
+      "period": "Oct 2024 – Jul 2025",
+      "summary": "Worked directly with 5+ clients to deliver tailored web solutions, manage infrastructure, and support multi-site digital workflows.",
+      "highlights": [
+        "Worked directly with 5+ clients to understand business needs and deliver tailored website solutions.",
+        "Built responsive, user-friendly websites from Figma designs using WordPress and Webflow.",
+        "Managed 10+ concurrent web projects including updating website content and blogs, improving website performance, and resolving technical issues.",
+        "Applied SEO best practices to improve website structure, content discoverability, and search engine visibility.",
+        "Managed website infrastructure on Linode, including server setup, DNS configuration, and database management.",
+        "Delivered projects on schedule while maintaining website quality and client satisfaction."
+      ]
+    },
+    {
+      "role": "WordPress Developer",
+      "company": "ThemeGrill Pvt. Ltd.",
+      "location": "Kathmandu, Nepal",
+      "period": "Jun 2022 – Mar 2024",
+      "summary": "Maintained popular WordPress themes and plugins with over 100,000 active installations and led e-commerce theme developments.",
+      "highlights": [
+        "Maintained WordPress themes and plugins with over 100,000 active installations.",
+        "Led the development of 3 WooCommerce themes, increasing revenue by 10%.",
+        "Integrated modern WordPress trends into company workflow, improving team efficiency by 20%.",
+        "Integrated and configured 5+ external plugins to enhance product functionality.",
+        "Collaborated with support and marketing teams on product improvements, customer needs, and promotional campaigns."
+      ]
+    },
+    {
+      "role": "Statistical Programmer Intern",
+      "company": "Numeric Mind",
+      "location": "Kathmandu, Nepal",
+      "period": "Mar 2024 – Jun 2024",
+      "summary": "Data cleaning, quality assurance, and visual reporting across datasets containing 60,000+ records.",
+      "highlights": [
+        "Analysed and processed datasets containing 60,000+ records to identify issues and ensure data quality.",
+        "Cleaned, transformed, and organised data to support accurate analysis and reporting.",
+        "Created tables and visual reports to communicate findings and support data-driven decisions."
+      ]
+    },
+    {
+      "role": "Digital Champion",
+      "company": "University of Greenwich",
+      "location": "London, UK",
+      "period": "Jan 2026 – Sep 2026",
+      "summary": "Supported University IT systems, library services, and conducted digital skills training sessions for students and staff.",
+      "highlights": [
+        "Provided hands-on support for University IT systems and library services.",
+        "Assisted in delivering digital skills training sessions and peer-to-peer technical support.",
+        "Supported students and staff in developing digital literacy across the university."
+      ]
+    },
+    {
+      "role": "Volunteer Administrative Assistant",
+      "company": "Child Action Nepal",
+      "location": "London / Kathmandu",
+      "period": "Apr 2022 – Present",
+      "summary": "Managing organization website and social media presence, producing digital content, and handling administrative tasks.",
+      "highlights": [
+        "Managed social media channels and website to share organisational activities and engage supporters.",
+        "Produced digital content to raise awareness of the organization's mission and encourage donations.",
+        "Delivered academic support and mentoring to children promoting learning and personal development."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc. Data Science (Distinction)",
+      "institution": "University of Greenwich",
+      "location": "London, UK",
+      "year": "Sep 2026"
+    },
+    {
+      "degree": "BSc. Computer Science & IT (76.76%)",
+      "institution": "Tribhuvan University",
+      "location": "Kathmandu, Nepal",
+      "year": "Aug 2022"
+    }
+  ]
+}
