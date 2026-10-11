@@ -814,7 +814,7 @@ a {
 
 @media (min-width: 768px) {
   .experience-item {
-    grid-template-columns: 14rem 1fr;
+    grid-template-columns: 20rem 1fr;
     gap: 2rem;
   }
 }
