@@ -3,8 +3,8 @@ title: "Kirana — WooCommerce Theme"
 description: "A pure Gutenberg block-based WooCommerce theme designed for organic groceries and fresh supermarket retail, featuring full-site editing patterns and responsive shopping workflows."
 previewUrl: "themegrilldemos.com/kirana"
 order: 1
-thumbnail: "/assets/images/projects/project-kirana.jpg"
-thumbnailAlt: "Kirana organic grocery WooCommerce store demo screenshot"
+thumbnail: "/assets/images/projects/project-kirana.png"
+thumbnailAlt: "Kirana organic grocery WooCommerce store homepage"
 technologies:
   - "WordPress"
   - "Gutenberg Blocks"

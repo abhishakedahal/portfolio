@@ -8,38 +8,49 @@ permalink: "/"
    1. HERO SECTION
    ========================================================================= #}
 <section class="editorial-section" aria-labelledby="hero-title">
-  <div class="hero-content">
-    <div class="eyebrow">
-      <span class="dot-cobalt" aria-hidden="true"></span>
-      <span>{{ site.hero.eyebrow }}</span>
+  <div class="hero-layout">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="dot-cobalt" aria-hidden="true"></span>
+        <span>{{ site.hero.eyebrow }}</span>
+      </div>
+
+      <h1 id="hero-title" class="hero-headline">
+        {{ site.hero.headline }}
+      </h1>
+
+      <p class="hero-lead">
+        {{ site.hero.lead }}
+      </p>
+
+      <div class="hero-actions-row">
+        <a href="#work" class="hero-link">
+          <span>Explore my work</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+
+        <a href="#contact" class="hero-link hero-link--cobalt">
+          <span>Get in touch</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        {# <div class="hero-status-tag">
+          <span class="dot-green" aria-hidden="true"></span>
+          <span>{{ site.hero.status }}</span>
+        </div> #}
+      </div>
     </div>
 
-    <h1 id="hero-title" class="hero-headline">
-      {{ site.hero.headline }}
-    </h1>
-
-    <p class="hero-lead">
-      {{ site.hero.lead }}
-    </p>
-
-    <div class="hero-actions-row">
-      <a href="#work" class="hero-link">
-        <span>Explore my work</span>
-        <span aria-hidden="true">↓</span>
-      </a>
-
-      <a href="#contact" class="hero-link hero-link--cobalt">
-        <span>Get in touch</span>
-        <span aria-hidden="true">↗</span>
-      </a>
-
-      <div class="hero-status-tag">
-        <span class="dot-green" aria-hidden="true"></span>
-        <span>{{ site.hero.status }}</span>
-      </div>
+    <div class="hero-photo">
+      <img
+        src="{{ site.hero.profilePhoto }}"
+        alt="Portrait"
+        class="hero-profile-image"
+      />
     </div>
   </div>
 </section>
+
 
 {# =========================================================================
    2. SELECTED WORK SECTION
@@ -51,7 +62,7 @@ permalink: "/"
       <h2 id="work-title" class="section-headline">Recent Projects</h2>
     </div>
     <p class="section-summary-text">
-      A selection of projects across websites, e-commerce and digital content.
+      A selection of projects I've worked on.
     </p>
   </div>
 

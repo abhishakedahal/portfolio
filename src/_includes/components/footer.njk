@@ -5,7 +5,7 @@
         {{ site.name }}
       </p>
       <p style="font-size: 0.8125rem; color: var(--text-muted);">
-        {{ site.footer.copyright }}
+        &copy; {% currentYear %} {{ site.name }} &middot; Built with semantic HTML &amp; CSS
       </p>
     </div>
 
@@ -14,7 +14,6 @@
       {% for item in site.navigation %}
         <a href="{{ item.url }}">{{ item.label }}</a>
       {% endfor %}
-      <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
 </footer>

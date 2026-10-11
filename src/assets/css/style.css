@@ -13,20 +13,20 @@
   --bg-container: #f0edeb;
   --bg-container-low: #f6f3f1;
   --bg-container-high: #ebe8e5;
-  
+
   --text-on-surface: #1c1c1a;
   --text-secondary: #605e58;
   --text-muted: #8c887f;
-  
+
   --border-rule: #e6e2da;
   --border-hover: #c3c5d7;
   --border-strong: #737686;
-  
+
   /* Restrained Cobalt Blue Accent */
   --accent-cobalt: #1a56db;
   --accent-cobalt-hover: #003fb1;
   --accent-cobalt-light: #dbe1ff;
-  
+
   --status-green: #059669;
 
   /* Typography */
@@ -35,7 +35,8 @@
   --font-mono: "Inter", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Sizing & Rhythm */
-  --max-w-content: 72rem; /* 1152px */
+  --max-w-content: 72rem;
+  /* 1152px */
   --radius-sm: 0.125rem;
   --radius-md: 0.25rem;
   --radius-lg: 0.5rem;
@@ -47,7 +48,9 @@
 }
 
 /* Reset & Box Sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -112,7 +115,10 @@ body {
 }
 
 /* Editorial Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--text-on-surface);
   font-weight: 400;
   line-height: 1.2;
@@ -169,6 +175,8 @@ a {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-rule);
+  /* Needed so the mobile nav dropdown can be positioned relative to this */
+  isolation: isolate;
 }
 
 .site-header__inner {
@@ -236,6 +244,124 @@ a {
 .btn-header-cta:hover {
   background-color: var(--accent-cobalt);
   color: #ffffff;
+}
+
+/* Header Right group (CTA + burger) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Hamburger Toggle Button */
+.nav-toggle {
+  display: none;
+  /* hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: none;
+  /* border: 1px solid var(--border-rule); */
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  padding: 0.35rem;
+  transition: border-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.nav-toggle:hover {
+  border-color: var(--border-strong);
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 1.5rem;
+  height: 1.5px;
+  background-color: var(--text-on-surface);
+  border-radius: 2px;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
+  transform-origin: center;
+}
+
+/* Animate bars to X when open */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile nav behaviour */
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .btn-header-cta {
+    display: none;
+    /* hide CTA on mobile — contact link is in the nav */
+  }
+
+  .site-nav {
+    /* Dropdown below header — absolutely positioned within the sticky header */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-rule);
+    border-bottom: 1px solid var(--border-rule);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 0.5rem 1.25rem 1.25rem;
+    z-index: 49;
+    /* Hidden by default */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity var(--transition-smooth), transform var(--transition-smooth), visibility 0s var(--transition-smooth);
+  }
+
+  .site-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity var(--transition-smooth), transform var(--transition-smooth), visibility 0s;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .site-nav__list li {
+    border-bottom: 1px solid var(--border-rule);
+    width: 100%;
+  }
+
+  .site-nav__list li:last-child {
+    border-bottom: none;
+  }
+
+  .site-nav__link {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 /* Sections Baseline */
@@ -315,6 +441,42 @@ a {
   gap: 0.5rem;
   padding-left: 0;
 }
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hero-layout {
+    grid-template-columns: 2fr 0.5fr;
+    gap: 2rem;
+  }
+}
+
+/* circular hero photo border radius */
+.hero-photo {
+  position: relative;
+  width: 100%;
+  max-width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.hero-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 @media (min-width: 640px) {
   .hero-status-tag {
@@ -522,6 +684,7 @@ a {
   gap: 3rem;
 }
 
+
 @media (min-width: 768px) {
   .about-grid {
     grid-template-columns: 5fr 7fr;
@@ -677,6 +840,12 @@ a {
   font-size: 0.875rem;
   font-weight: 500;
   transition: all var(--transition-fast);
+}
+
+@media (max-width: 767px) {
+  .btn-contact {
+    width: 100%;
+  }
 }
 
 .btn-contact--primary {

@@ -14,50 +14,73 @@
     "github": "https://github.com/abhishakedahal"
   },
   "hero": {
-    "eyebrow": "WEB DEVELOPMENT · DIGITAL PROJECTS",
-    "headline": "Building useful things for the web.",
-    "lead": "I'm Abhishek, a web developer with experience building and maintaining websites, working across e-commerce, content and the technical details that keep things running.",
-    "status": "Available for select freelance & full-time roles"
+    "eyebrow": "Continuous learning",
+    "headline": "WordPress . Webflow . Data",
+    "lead": "I’m Abhishek, a developer and data science graduate passionate about building useful digital solutions. With experience across WordPress, Webflow, e-commerce, and data analytics, I enjoy solving problems, improving workflows, and turning ideas into real-world applications. I’m driven by curiosity, continuous learning, and the challenge of making technology work better for people.",
+    "status": "Looking for full-time roles across web and data. Open to relocate.",
+    "profilePhoto": "/assets/images/profile.jpg"
   },
   "navigation": [
-    { "label": "Work", "url": "#work" },
-    { "label": "About", "url": "#about" },
-    { "label": "Experience", "url": "#experience" },
-    { "label": "Contact", "url": "#contact" }
+    {
+      "label": "Work",
+      "url": "#work"
+    },
+    {
+      "label": "About",
+      "url": "#about"
+    },
+    {
+      "label": "Experience",
+      "url": "#experience"
+    }
   ],
   "about": {
     "heading": "A little about me",
-    "leadHeading": "Craft, consistency, & execution.",
-    "text": "I enjoy working across different parts of the web, from building and customising websites to managing content and handling the technical setup behind them. My experience has involved working on real projects, solving practical problems and collaborating with people to get things done."
+    "leadHeading": "Figuring things out, finding better ways.",
+    "text": "I enjoy exploring different areas of technology, from building websites and managing content to working with data and finding better ways to solve problems. My experience spans web development, content management, and data analytics, often involving real projects and collaboration with people from different backgrounds. I'm always keen to learn something new, take on challenges, and find practical ways to get things done properly, even when it means figuring things out along the way."
   },
   "skills": [
     {
-      "category": "Development",
-      "items": "HTML, CSS, JavaScript, PHP"
+      "category": "Languages",
+      "items": "HTML, CSS, JavaScript, PHP, SQL"
     },
     {
-      "category": "Platforms",
-      "items": "WordPress, Webflow, OpenCart"
+      "category": "Web Platforms",
+      "items": "WordPress, Webflow, WooCommerce, Hubspot"
     },
     {
-      "category": "Tools & Infra",
-      "items": "Git, Jira, Figma, Linode, DNS and database configuration"
+      "category": "Data & Analytics",
+      "items": "Data Analysis, Machine Learning, Data Visualisation, Excel, Power BI"
     },
     {
-      "category": "Content",
-      "items": "Blog management, website updates and digital publishing"
+      "category": "Tools & Infrastructure",
+      "items": "Git, Jira, Figma, Linode, Databricks, GCP"
+    },
+    {
+      "category": "Content & SEO",
+      "items": "Blog Management, Website Content Updates, SEO Best Practices"
     }
   ],
   "experience": [
     {
       "company": "Pagoda Labs",
-      "role": "Web Developer & Maintenance",
-      "description": "Focused on end-to-end website development, ongoing client platform maintenance, layout enhancements, and executing smooth content updates across active commercial installations."
+      "role": "Frontend Developer",
+      "description": "Worked with clients to build and maintain websites using WordPress and Webflow. Managed multiple projects, updated website content and blogs, improved functionality, and handled technical tasks including server setup, DNS, and database configuration."
     },
     {
       "company": "ThemeGrill",
-      "role": "WordPress & Theme Engineering",
-      "description": "Specialized in template customization, cross-browser responsive testing, styling adaptations, and structuring digital layouts for modular content presentation."
+      "role": "WordPress Developer",
+      "description": "Developed and maintained WordPress themes and plugins used across 100,000+ active installations. Led the development of three WooCommerce themes, integrated third-party plugins, and collaborated with support and marketing teams to improve products and support campaigns."
+    },
+    {
+      "company": "Numeric Mind",
+      "role": "Statistical Programmer Intern",
+      "description": "Worked with clinical trial datasets containing 45,000–60,000 records, performing data cleaning, transformation, and analysis. Created tables and reports to communicate findings while maintaining data quality and following industry-standard data frameworks."
+    },
+    {
+      "company": "Child Action Nepal",
+      "role": "Volunteer Administrative Assistant",
+      "description": "Support educational activities and mentoring for children aged 6–18, alongside administrative coordination, record keeping, and communication with staff and volunteers. Contribute to website and social media content, fundraising activities, and impact storytelling projects."
     }
   ],
   "contact": {

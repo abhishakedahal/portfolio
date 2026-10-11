@@ -38,7 +38,9 @@
       {% endif %}
 
       <h3 class="work-card-title">
-        {{ project.data.title }}
+        <a href="{{ project.data.liveUrl }}" target="_blank" rel="noopener noreferrer">
+          {{ project.data.title }}
+        </a>
       </h3>
 
       <p class="work-card-desc">

@@ -3,7 +3,7 @@ title: "Crisp Stories — Creative Agency"
 description: "A digital agency website for Crisp Stories showcasing purpose-driven brand building, publication design, video narratives, and strategic digital campaigns."
 previewUrl: "crispstories.com"
 order: 8
-thumbnail: "/assets/images/projects/project-crispstories.svg"
+thumbnail: "/assets/images/projects/project-crispstories.png"
 thumbnailAlt: "Crisp Stories creative agency platform screenshot"
 technologies:
   - "Webflow"
