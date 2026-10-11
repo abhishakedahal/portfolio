@@ -55,7 +55,7 @@ permalink: "/"
 {# =========================================================================
    2. SELECTED WORK SECTION
    ========================================================================= #}
-<section id="work" class="editorial-section" aria-labelledby="work-title">
+<section id="work" class="editorial-section" data-reveal-early aria-labelledby="work-title">
   <div class="section-intro-bar">
     <div>
       <span class="eyebrow">Selected work</span>
@@ -85,6 +85,10 @@ permalink: "/"
       <p class="about-text">
         {{ site.about.text }}
       </p>
+      <p class="about-interests">
+        <span class="eyebrow">Beyond the work</span>
+        {{ site.about.interests }}
+      </p>
     </div>
 
     <!-- Right Column: Skills Matrix -->
@@ -100,7 +104,32 @@ permalink: "/"
 </section>
 
 {# =========================================================================
-   4. EXPERIENCE SECTION
+   4. EDUCATION SECTION
+   ========================================================================= #}
+<section id="education" class="editorial-section" aria-labelledby="education-title">
+  <div class="experience-max">
+    <span class="eyebrow">Academic background</span>
+    <h2 id="education-title" class="section-headline" style="margin-bottom: 2.5rem;">Education</h2>
+
+    <div class="experience-list">
+      {% for item in site.education %}
+        <article class="experience-item">
+          <div>
+            <h3 class="experience-company">{{ item.degree }}</h3>
+            <p class="experience-role">{{ item.institution }}</p>
+          </div>
+          <div>
+            <p class="education-result">{{ item.result }}</p>
+            <p class="experience-desc">{{ item.year }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =========================================================================
+   5. EXPERIENCE SECTION
    ========================================================================= #}
 <section id="experience" class="editorial-section" aria-labelledby="experience-title">
   <div class="experience-max">
@@ -124,7 +153,7 @@ permalink: "/"
 </section>
 
 {# =========================================================================
-   5. CONTACT SECTION
+   6. CONTACT SECTION
    ========================================================================= #}
 <section id="contact" class="editorial-section" style="border-bottom: none;" aria-labelledby="contact-title">
   <div class="contact-banner">

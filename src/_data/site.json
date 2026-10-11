@@ -30,6 +30,10 @@
       "url": "#about"
     },
     {
+      "label": "Education",
+      "url": "#education"
+    },
+    {
       "label": "Experience",
       "url": "#experience"
     }
@@ -37,7 +41,8 @@
   "about": {
     "heading": "A little about me",
     "leadHeading": "Figuring things out, finding better ways.",
-    "text": "I enjoy exploring different areas of technology, from building websites and managing content to working with data and finding better ways to solve problems. My experience spans web development, content management, and data analytics, often involving real projects and collaboration with people from different backgrounds. I'm always keen to learn something new, take on challenges, and find practical ways to get things done properly, even when it means figuring things out along the way."
+    "text": "I enjoy exploring different areas of technology, from building websites and managing content to working with data and finding better ways to solve problems. My experience spans web development, content management, and data analytics, often involving real projects and collaboration with people from different backgrounds. I'm always keen to learn something new, take on challenges, and find practical ways to get things done properly, even when it means figuring things out along the way.",
+    "interests": "Outside of work, I enjoy cycling, hiking, listening to music, and meeting new people."
   },
   "skills": [
     {
@@ -81,6 +86,20 @@
       "company": "Child Action Nepal",
       "role": "Volunteer Administrative Assistant",
       "description": "Support educational activities and mentoring for children aged 6–18, alongside administrative coordination, record keeping, and communication with staff and volunteers. Contribute to website and social media content, fundraising activities, and impact storytelling projects."
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc Data Science",
+      "institution": "University of Greenwich, London",
+      "year": "2026",
+      "result": "Distinction"
+    },
+    {
+      "degree": "BSc Computer Science and IT",
+      "institution": "Tribhuvan University, Kathmandu, Nepal",
+      "year": "2022",
+      "result": "76.76%"
     }
   ],
   "contact": {
