@@ -1,6 +1,6 @@
 # Abhishek Dahal - Personal Portfolio
 
-A polished, minimalist, single-page personal portfolio website for **Abhishek Dahal**, designed using **Google Stitch** and built with **[Eleventy (11ty)](https://www.11ty.dev/)** and plain CSS. Configured for automated deployment to **GitHub Pages** via **GitHub Actions**.
+This is my personal portfolio website, designed using **Google Stitch** and built with **[Eleventy (11ty)](https://www.11ty.dev/)** and plain CSS. Configured for automated deployment to **GitHub Pages** via **GitHub Actions**.
 
 ---
 
