@@ -81,7 +81,6 @@ technologies:
   - "WordPress"
   - "CSS"
 liveUrl: "#contact"
-liveUrlLabel: "Live Preview ↗"
 sourceUrl: "https://github.com/abhishakedahal"
 sourceUrlLabel: "Source Code ↗"
 ---
@@ -89,7 +88,7 @@ sourceUrlLabel: "Source Code ↗"
 
 - **Order:** Controls position in the grid (`order: 1` first).
 - **Preview URL:** Monospace address text shown in the browser frame bar (e.g. `business-platform.preview`).
-- **Links:** Specify `liveUrl`, `sourceUrl`, `caseUrl`, or `archUrl`. Optional links are hidden automatically if omitted.
+- **Links:** Specify `liveUrl` for the card's full-card title link. Optional links are hidden automatically if omitted.
 
 ### 3. Adding Project Images
 

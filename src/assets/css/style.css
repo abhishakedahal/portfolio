@@ -108,6 +108,16 @@ html.reveal-ready .editorial-section.is-visible {
     transform: none;
     transition: none;
   }
+
+  .work-card,
+  .work-card::after,
+  .browser-screen-img {
+    transition: none;
+  }
+
+  .work-card:hover {
+    transform: none;
+  }
 }
 
 ::selection {
@@ -567,6 +577,9 @@ a {
 }
 
 .work-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-rule);
   border-radius: var(--radius-lg);
@@ -574,11 +587,51 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color var(--transition-fast);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color var(--transition-fast),
+    box-shadow 0.3s ease;
 }
 
 .work-card:hover {
   border-color: var(--border-hover);
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+.work-card .work-card-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.work-card::after {
+  display: block !important;
+  content: "Visit Website \2197";
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 40px);
+  z-index: 15;
+  max-width: calc(100% - 2rem);
+  box-sizing: border-box;
+  padding: clamp(8px, 1.5vw, 10px) clamp(16px, 3.5vw, 24px);
+  border-radius: 50px;
+  background: var(--color-primary, #3b82f6);
+  color: white;
+  font-weight: 700;
+  font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.work-card:hover::after,
+.work-card:focus-within::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 /* Browser Mockup Frame */
@@ -680,39 +733,15 @@ a {
   color: var(--accent-cobalt);
 }
 
+.work-card-title a:focus-visible {
+  outline: 2px solid var(--accent-cobalt);
+  outline-offset: 4px;
+}
+
 .work-card-desc {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-/* Card Bottom Links */
-.work-card-footer {
-  display: flex;
-  align-items: center;
-  padding-top: 1.25rem;
-  margin-top: 1.25rem;
-  border-top: 1px solid var(--border-rule);
-}
-
-.card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-rule);
-  background-color: var(--bg-surface);
-  color: var(--text-on-surface);
-  transition: all var(--transition-fast);
-}
-
-.card-link:hover {
-  border-color: var(--accent-cobalt);
-  color: var(--accent-cobalt);
-  background-color: rgba(26, 86, 219, 0.04);
 }
 
 /* About Section (12-Column Editorial Grid) */

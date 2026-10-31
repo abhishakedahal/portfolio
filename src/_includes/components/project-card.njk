@@ -38,9 +38,13 @@
       {% endif %}
 
       <h3 class="work-card-title">
-        <a href="{{ project.data.liveUrl }}" target="_blank" rel="noopener noreferrer">
+        {% if project.data.liveUrl %}
+          <a href="{{ project.data.liveUrl }}" target="_blank" rel="noopener noreferrer">
+            {{ project.data.title }}
+          </a>
+        {% else %}
           {{ project.data.title }}
-        </a>
+        {% endif %}
       </h3>
 
       <p class="work-card-desc">
@@ -49,12 +53,4 @@
     </div>
   </div>
 
-  <!-- Bottom Links: Only Live Preview as requested -->
-  <div class="work-card-footer">
-    {% if project.data.liveUrl %}
-      <a href="{{ project.data.liveUrl }}" class="card-link" target="_blank" rel="noopener noreferrer">
-        Live Preview ↗
-      </a>
-    {% endif %}
-  </div>
 </article>
