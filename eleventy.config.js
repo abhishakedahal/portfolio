@@ -1,7 +1,8 @@
 const { HtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
-  // Automatically rewrite internal root-relative URLs with pathPrefix when deployed
+  // Rewrite internal URLs for the deployment base path. The custom domain is
+  // served from the domain root, so this must remain "/".
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
   // Passthrough static assets
@@ -59,7 +60,7 @@ module.exports = function (eleventyConfig) {
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    // Configurable base path for GitHub Pages subpath deployment
+    // Custom domain deployment: https://dahalabhishek.com.np/
     pathPrefix: process.env.PATH_PREFIX || "/"
   };
 };

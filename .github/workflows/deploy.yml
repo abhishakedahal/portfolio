@@ -38,15 +38,8 @@ jobs:
 
       - name: Build Eleventy Site
         run: |
-          REPO_NAME="${{ github.event.repository.name }}"
-          REPO_OWNER="${{ github.repository_owner }}"
-          # If personal root site (username.github.io), deploy at root (/)
-          # If project repository (username.github.io/repo), deploy under (/repo/)
-          if [ "$REPO_NAME" = "$REPO_OWNER.github.io" ]; then
-            export PATH_PREFIX="/"
-          else
-            export PATH_PREFIX="/$REPO_NAME/"
-          fi
+          # The custom domain serves this site from the domain root.
+          export PATH_PREFIX="/"
           echo "Deploying with PATH_PREFIX=$PATH_PREFIX"
           npm run build
 
