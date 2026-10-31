@@ -1,8 +1,8 @@
 ---
 title: "Nima Rinji Sherpa — Official Portfolio"
-description: "The official website for world record-breaking mountaineer Nima Rinji Sherpa, featuring dynamic climb timelines, interactive peak sliders, and Finsweet CMS filtering."
+description: "Built Nima Rinji Sherpa's Webflow portfolio, including a mountain-climb carousel showcasing the peaks he has climbed—one of the project features I am most proud of."
 previewUrl: "nima-ea77c6.webflow.io"
-order: 6
+order: 7
 thumbnail: "/assets/images/projects/project-nima.png"
 thumbnailAlt: "Nima Rinji Sherpa mountaineering portfolio screenshot"
 technologies:
@@ -12,4 +12,4 @@ technologies:
   - "CMS Collections"
 liveUrl: "https://nima-ea77c6.webflow.io/"
 ---
-Official website built with Webflow for Nima Rinji Sherpa at Pagoda Labs.
+Built the Webflow portfolio for Nima Rinji Sherpa at Pagoda Labs, including the interactive carousel showcasing the mountains he has climbed.

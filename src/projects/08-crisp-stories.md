@@ -1,8 +1,8 @@
 ---
 title: "Crisp Stories — Creative Agency"
-description: "A digital agency website for Crisp Stories showcasing purpose-driven brand building, publication design, video narratives, and strategic digital campaigns."
+description: "Redesigned and rebuilt the Crisp Stories website from WordPress to Webflow, creating a more flexible platform for its creative agency work."
 previewUrl: "crispstories.com"
-order: 8
+order: 9
 thumbnail: "/assets/images/projects/project-crispstories.png"
 thumbnailAlt: "Crisp Stories creative agency platform screenshot"
 technologies:
@@ -12,4 +12,4 @@ technologies:
   - "Responsive Web"
 liveUrl: "https://www.crispstories.com/"
 ---
-Creative agency portfolio built with Webflow at Pagoda Labs.
+Redesigned and rebuilt the Crisp Stories website from WordPress to Webflow at Pagoda Labs.

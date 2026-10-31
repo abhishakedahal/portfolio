@@ -1,6 +1,6 @@
 ---
 title: "WebShop — Hybrid WooCommerce Theme"
-description: "A comprehensive hybrid WooCommerce theme with block support engineered for high-traffic multi-category online shops, electronics, and commercial storefronts."
+description: "Implemented fixes, Gutenberg block patterns, and product catalogs for WebShop, a hybrid WooCommerce theme for multi-category online stores."
 previewUrl: "themegrilldemos.com/webshop"
 order: 4
 thumbnail: "/assets/images/projects/project-webshop.png"
@@ -12,4 +12,4 @@ technologies:
   - "Block Support"
 liveUrl: "https://themegrilldemos.com/webshop/"
 ---
-Hybrid WooCommerce theme with block support built at ThemeGrill.
+Implemented fixes, developed Gutenberg block patterns, and built product catalogs for WebShop at ThemeGrill.

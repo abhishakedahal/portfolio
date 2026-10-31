@@ -1,8 +1,8 @@
 ---
 title: "The SOL Guides — Early Childhood Development"
-description: "An educational consultancy platform providing research-backed early childhood development guidance, school readiness toolkits, and contextual frameworks for educators and caregivers."
+description: "Redesigned The SOL Guides website from WordPress to Webflow, translating its early childhood development content into a clearer, more flexible experience."
 previewUrl: "thesolguides.com"
-order: 7
+order: 8
 thumbnail: "/assets/images/projects/project-solguides.png"
 thumbnailAlt: "The SOL Guides early childhood development platform screenshot"
 technologies:
@@ -12,4 +12,4 @@ technologies:
   - "Content Strategy"
 liveUrl: "https://www.thesolguides.com/"
 ---
-Early childhood development platform built with Webflow at Pagoda Labs.
+Redesigned and rebuilt The SOL Guides website from WordPress to Webflow at Pagoda Labs.

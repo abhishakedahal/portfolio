@@ -1,8 +1,8 @@
 ---
 title: "Kwant.ai — Workforce Intelligence Platform"
-description: "An enterprise B2B website for Kwant.ai, an AI-powered construction workforce safety, productivity, and access control platform with real-time jobsite intelligence."
+description: "Implemented new Webflow pages for Kwant.ai, updated content, refactored the CMS for easier management, and added dynamic animations."
 previewUrl: "kwant.ai"
-order: 9
+order: 5
 thumbnail: "/assets/images/projects/project-kwant.png"
 thumbnailAlt: "Kwant.ai AI-powered construction safety platform screenshot"
 technologies:
@@ -12,4 +12,4 @@ technologies:
   - "Performance Tuning"
 liveUrl: "https://www.kwant.ai/"
 ---
-Enterprise B2B website built with Webflow for Kwant.ai.
+Implemented new pages and content updates in Webflow for Kwant.ai, refactored its CMS to make it easier to manage, and developed dynamic animations.
