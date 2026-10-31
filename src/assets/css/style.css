@@ -7,16 +7,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
 
 :root {
-  /* Editorial Palette: Warm Off-White, Ink, and Restrained Cobalt */
-  --bg-surface: #fcf9f6;
+  /* Editorial Palette: White, Ink, and Restrained Cobalt */
+  --bg-surface: #ffffff;
   --bg-surface-elevated: #faf8f5;
   --bg-container: #f0edeb;
   --bg-container-low: #f6f3f1;
   --bg-container-high: #ebe8e5;
 
-  --text-on-surface: #1c1c1a;
-  --text-secondary: #605e58;
-  --text-muted: #8c887f;
+  --text-on-surface: #000000;
+  --text-secondary: #404040;
+  --text-muted: #595959;
 
   --border-rule: #e6e2da;
   --border-hover: #c3c5d7;
@@ -86,6 +86,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-surface);
+  color: var(--text-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html.reveal-ready .editorial-section {
