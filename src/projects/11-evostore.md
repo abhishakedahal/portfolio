@@ -1,6 +1,6 @@
 ---
 title: "EvoStore — E-commerce Website"
-description: "Contributed to the EvoStore website redesign and overhaul, while updating and maintaining product listings with accurate product information and descriptions."
+description: "EvoStore is one of Nepal's biggest platforms for official Apple products and other electronic gadgets. I contributed to the website redesign and overhaul, maintained product listings with accurate information and descriptions, and handled SEO optimisation."
 previewUrl: "evostore.com.np"
 order: 3
 thumbnail: "/assets/images/projects/evostore.png"
@@ -11,6 +11,7 @@ technologies:
   - "Website Redesign"
   - "Product Management"
   - "Content Updates"
+  - "SEO Optimisation"
 liveUrl: "https://evostore.com.np/"
 ---
-Contributed to the EvoStore website redesign and overhaul. Updated and maintained product listings across the e-commerce website, ensuring accurate product information and descriptions.
+EvoStore is one of Nepal's biggest platforms for official Apple products and other electronic gadgets. I contributed to the website redesign and overhaul, maintained product listings with accurate information and descriptions, and handled SEO optimisation.
