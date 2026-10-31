@@ -997,6 +997,12 @@ a {
   transition: all var(--transition-fast);
 }
 
+.btn-contact-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+}
+
 @media (max-width: 767px) {
   .btn-contact {
     width: 100%;
