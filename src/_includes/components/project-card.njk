@@ -7,6 +7,9 @@
         <span class="browser-dot" aria-hidden="true"></span>
         <span class="browser-dot" aria-hidden="true"></span>
         <span class="browser-address">{{ project.data.previewUrl or "project.preview" }}</span>
+        {% if project.data.liveUrl %}
+          <span class="browser-action-indicator" aria-hidden="true">Visit site ↗</span>
+        {% endif %}
       </div>
       <div class="browser-screen-wrapper">
         {% if project.data.thumbnail %}
@@ -32,7 +35,16 @@
       {% if project.data.technologies and project.data.technologies.length > 0 %}
         <div class="tech-pills-row" aria-label="Technologies used">
           {% for tech in project.data.technologies %}
-            <span class="tech-pill">{{ tech }}</span>
+          <span class="tech-pill{% if tech == 'Webflow' %} tech-pill--webflow{% elif tech == 'WordPress' %} tech-pill--wordpress{% elif tech == 'OpenCart' %} tech-pill--opencart{% endif %}">
+            {% if tech == 'Webflow' %}
+              <span class="tech-pill-logo tech-pill-logo--webflow" aria-hidden="true">W</span>
+            {% elif tech == 'WordPress' %}
+              <span class="tech-pill-logo tech-pill-logo--wordpress" aria-hidden="true">W</span>
+            {% elif tech == 'OpenCart' %}
+              <span class="tech-pill-logo tech-pill-logo--opencart" aria-hidden="true">C</span>
+            {% endif %}
+            <span>{{ tech }}</span>
+          </span>
           {% endfor %}
         </div>
       {% endif %}
