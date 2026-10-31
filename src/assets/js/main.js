@@ -95,4 +95,40 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const pacmanGhost = document.querySelector(".pacman-ghost");
+
+  if (pacmanGhost && window.matchMedia("(pointer: fine)").matches) {
+    let pointerX = window.innerWidth / 2;
+    let pointerY = window.innerHeight / 2;
+    let frameRequested = false;
+
+    function updateGhostEyes() {
+      const bounds = pacmanGhost.getBoundingClientRect();
+      const centerX = bounds.left + bounds.width / 2;
+      const centerY = bounds.top + bounds.height / 2;
+      const distance = Math.hypot(pointerX - centerX, pointerY - centerY) || 1;
+      const pupilOffset = 4.5 / distance;
+
+      pacmanGhost.style.setProperty(
+        "--pupil-x",
+        `${(pointerX - centerX) * pupilOffset}px`
+      );
+      pacmanGhost.style.setProperty(
+        "--pupil-y",
+        `${(pointerY - centerY) * pupilOffset}px`
+      );
+      frameRequested = false;
+    }
+
+    document.addEventListener("pointermove", function (event) {
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+
+      if (!frameRequested) {
+        frameRequested = true;
+        window.requestAnimationFrame(updateGhostEyes);
+      }
+    });
+  }
 });

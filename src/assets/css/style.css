@@ -1047,6 +1047,87 @@ a {
   color: var(--text-secondary);
 }
 
+.pacman-ghost {
+  --ghost-color: #111111;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 3.25rem;
+  height: 3.6rem;
+  padding-top: 0.75rem;
+  border-radius: 0;
+  background: var(--ghost-color);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  clip-path: path(
+    "M 0 52 C 1 19 7 0 26 0 C 45 0 51 19 52 52 C 49 44 46 44 43.33 52 C 40.33 60 37.67 60 34.67 52 C 31.67 44 29 44 26 52 C 23 60 20.33 60 17.33 52 C 14.33 44 11.67 44 8.67 52 C 5.67 60 3 60 0 52 Z"
+  );
+  animation: ghost-float 3s ease-in-out infinite;
+}
+
+.pacman-ghost::after {
+  display: none;
+}
+
+.pacman-ghost__eye {
+  position: relative;
+  z-index: 1;
+  width: 0.9rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.pacman-ghost__pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.42rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #17213a;
+  transform: translate(
+    calc(-50% + var(--pupil-x, 0px)),
+    calc(-50% + var(--pupil-y, 0px))
+  );
+  transition: transform 80ms ease-out;
+}
+
+@keyframes ghost-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-0.4rem) rotate(-3deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .pacman-ghost {
+    right: 1rem;
+    bottom: 1rem;
+    animation-name: ghost-float-mobile;
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes ghost-float-mobile {
+  0%,
+  100% {
+    transform: scale(0.85) translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: scale(0.85) translateY(-0.4rem) rotate(-3deg);
+  }
+}
+
 @media (min-width: 768px) {
   .site-footer__inner {
     flex-direction: row;
