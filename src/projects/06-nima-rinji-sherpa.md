@@ -1,6 +1,6 @@
 ---
 title: "Nima Rinji Sherpa — Official Portfolio"
-description: "Built Nima Rinji Sherpa's Webflow portfolio, including a mountain-climb carousel showcasing the peaks he has climbed—one of the project features I am most proud of."
+description: "Nima Rinji Sherpa's website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel."
 previewUrl: "nima-ea77c6.webflow.io"
 order: 7
 thumbnail: "/assets/images/projects/project-nima.png"
@@ -12,4 +12,4 @@ technologies:
   - "CMS Collections"
 liveUrl: "https://nima-ea77c6.webflow.io/"
 ---
-Built the Webflow portfolio for Nima Rinji Sherpa at Pagoda Labs, including the interactive carousel showcasing the mountains he has climbed.
+Nima Rinji Sherpa's website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel.

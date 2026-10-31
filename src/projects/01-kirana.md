@@ -1,6 +1,6 @@
 ---
 title: "Kirana — WooCommerce Theme"
-description: "Built the Kirana theme from scratch at ThemeGrill, including its Gutenberg patterns and WooCommerce demo website for organic grocery retail."
+description: "Kirana is a WooCommerce theme for grocery stores. I implemented the entire design and WooCommerce blocks, as well as wishlist functionality, block patterns, and the demo website."
 previewUrl: "themegrilldemos.com/kirana"
 order: 1
 thumbnail: "/assets/images/projects/project-kirana.png"
@@ -12,4 +12,4 @@ technologies:
   - "Full Site Editing"
 liveUrl: "https://themegrilldemos.com/kirana/"
 ---
-Built the Kirana theme from scratch at ThemeGrill, created its Gutenberg patterns, and developed the demo website and shopping workflows.
+Kirana is a WooCommerce theme for grocery stores. I implemented the entire design and WooCommerce blocks, as well as wishlist functionality, block patterns, and the demo website.

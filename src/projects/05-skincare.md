@@ -1,6 +1,6 @@
 ---
 title: "SkinCare — Hybrid WooCommerce Theme"
-description: "Implemented fixes, Gutenberg block patterns, and product catalogs for SkinCare, while also helping refactor its design for beauty and wellness brands."
+description: "SkinCare is a hybrid WooCommerce theme for beauty and cosmetics stores. I implemented fixes, block patterns, product catalogs, and design refinements for beauty and wellness brands."
 previewUrl: "themegrilldemos.com/skincare"
 order: 10
 thumbnail: "/assets/images/projects/project-skincare.png"
@@ -12,4 +12,4 @@ technologies:
   - "Block Support"
 liveUrl: "https://themegrilldemos.com/skincare/"
 ---
-Implemented fixes, developed Gutenberg block patterns and product catalogs, and helped refactor the SkinCare design at ThemeGrill.
+SkinCare is a hybrid WooCommerce theme for beauty and cosmetics stores. I implemented fixes, block patterns, product catalogs, and design refinements for beauty and wellness brands.

@@ -1,6 +1,6 @@
 ---
 title: "Blissful — WooCommerce Theme"
-description: "Built the Blissful theme from scratch at ThemeGrill, including its Gutenberg patterns and WooCommerce demo website for gifts, florals, and celebrations."
+description: "Blissful is a WooCommerce theme for stores selling gifts, flowers, toys, cakes, and other celebration products. I implemented the design, block patterns, WooCommerce layouts, and the demo website."
 previewUrl: "themegrilldemos.com/blissful"
 order: 6
 thumbnail: "/assets/images/projects/project-blissful.png"
@@ -12,4 +12,4 @@ technologies:
   - "Full Site Editing"
 liveUrl: "https://themegrilldemos.com/blissful/"
 ---
-Built the Blissful theme from scratch at ThemeGrill, created its Gutenberg patterns, and developed the demo website for boutique and celebration shopping.
+Blissful is a WooCommerce theme for stores selling gifts, flowers, toys, cakes, and other celebration products. I implemented the design, block patterns, WooCommerce layouts, and the demo website.

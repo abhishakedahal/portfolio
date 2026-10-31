@@ -1,6 +1,6 @@
 ---
 title: "WebShop — Hybrid WooCommerce Theme"
-description: "Implemented fixes, Gutenberg block patterns, and product catalogs for WebShop, a hybrid WooCommerce theme for multi-category online stores."
+description: "WebShop is a hybrid WooCommerce theme for general online stores and multi-category product catalogs. I implemented fixes, block patterns, product layouts, and product catalog content."
 previewUrl: "themegrilldemos.com/webshop"
 order: 4
 thumbnail: "/assets/images/projects/project-webshop.png"
@@ -12,4 +12,4 @@ technologies:
   - "Block Support"
 liveUrl: "https://themegrilldemos.com/webshop/"
 ---
-Implemented fixes, developed Gutenberg block patterns, and built product catalogs for WebShop at ThemeGrill.
+WebShop is a hybrid WooCommerce theme for general online stores and multi-category product catalogs. I implemented fixes, block patterns, product layouts, and product catalog content.

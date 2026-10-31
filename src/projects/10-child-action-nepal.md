@@ -1,6 +1,6 @@
 ---
 title: "Child Action Nepal — Bringing Happiness to Nepalese Orphans"
-description: "Implemented the Child Action Nepal website in WordPress. This project is particularly personal to me because I grew up there and actively volunteer with the organisation."
+description: "Child Action Nepal is a charity that supports orphanages in Nepal through fundraising, education, and family-centred care. I implemented the WordPress website from the founder's design; the project is personal because I grew up there and actively volunteer with the organisation."
 previewUrl: "childactionnepal.instawp.site"
 order: 11
 thumbnail: "/assets/images/projects/project-childactionnepal.png"
@@ -12,4 +12,4 @@ technologies:
   - "Fundraising"
 liveUrl: "https://childactionnepal.instawp.site/"
 ---
-Implemented the Child Action Nepal charity website in WordPress from the founder's design. The project is particularly personal to me because I grew up there and actively volunteer with the organisation.
+Child Action Nepal is a charity that supports orphanages in Nepal through fundraising, education, and family-centred care. I implemented the WordPress website from the founder's design; the project is personal because I grew up there and actively volunteer with the organisation.
