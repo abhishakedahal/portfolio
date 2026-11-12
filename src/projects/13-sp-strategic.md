@@ -2,7 +2,7 @@
 title: "SP Strategic — Strategic Consulting"
 description: "SP Strategic is a consulting firm that helps small and medium-sized businesses unlock growth through senior expertise, global networks, and strategic market opportunities. I implemented the WordPress website and presented its services, process, and value proposition through a clear digital experience."
 previewUrl: "sp-strategic.com"
-order: 3
+order: 2
 thumbnail: "/assets/images/projects/project-sp-strategic.png"
 thumbnailAlt: "SP Strategic consulting website"
 technologies:

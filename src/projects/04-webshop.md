@@ -2,7 +2,7 @@
 title: "WebShop — Hybrid WooCommerce Theme"
 description: "WebShop is a hybrid WooCommerce theme for general online stores and multi-category product catalogs. I implemented fixes, block patterns, product layouts, and product catalog content."
 previewUrl: "themegrilldemos.com/webshop"
-order: 9
+order: 8
 thumbnail: "/assets/images/projects/project-webshop.png"
 thumbnailAlt: "WebShop electronics and retail WooCommerce demo screenshot"
 technologies:
