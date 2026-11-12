@@ -10,6 +10,6 @@ technologies:
   - "Charity"
   - "Donation"
   - "Fundraising"
-liveUrl: "https://childactionnepal.instawp.site/"
+liveUrl: "https://childactionnepal.org.uk/"
 ---
 Child Action Nepal is a charity that supports orphanages in Nepal through fundraising, education, and family-centred care. I implemented the WordPress website from the founder's design; the project is personal because I grew up there and actively volunteer with the organisation.
