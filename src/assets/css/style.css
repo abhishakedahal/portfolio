@@ -1056,6 +1056,7 @@ a {
 @media (max-width: 767px) {
   .btn-contact {
     width: 100%;
+    padding: 0.6rem;
   }
 }
 
