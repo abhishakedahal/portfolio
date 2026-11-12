@@ -15,8 +15,9 @@
   },
   "hero": {
     "eyebrow": "Continuous learning",
-    "headline": "WordPress . Webflow . Data",
-    "lead": "I’m Abhishek, a developer and data science graduate passionate about building useful digital solutions. With experience across WordPress, Webflow, e-commerce, and data analytics, I enjoy solving problems, improving workflows, and turning ideas into real-world applications. I’m driven by curiosity, continuous learning, and the challenge of making technology work better for people.",
+    "headline": "Web . Data . Human",
+    "lead": "Hi. I’m Abhishek, a developer and data science graduate passionate about building useful digital solutions. With experience across WordPress, Webflow, e-commerce, and data analytics, I enjoy solving problems, improving workflows, and turning ideas into real-world applications. I’m driven by curiosity, continuous learning, and the challenge of making technology work better for people.",
+    "leadPersonal": "Outside my professional work, when I’m not pretending to be serious, I enjoy cycling, hiking, and making music. I also volunteer with a charity that supports vulnerable children by providing opportunities for education and a supportive family environment.",
     "status": "Looking for full-time roles across web and data. Open to relocate.",
     "profilePhoto": "/assets/images/profile.jpg"
   },
