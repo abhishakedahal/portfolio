@@ -96,6 +96,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const workFilter = document.getElementById("work-filter-select");
+
+  if (workFilter) {
+    const workCards = document.querySelectorAll(".work-card");
+
+    workFilter.addEventListener("change", function () {
+      const selectedPlatform = workFilter.value;
+
+      workCards.forEach(function (card) {
+        const platforms = card
+          .getAttribute("data-platforms")
+          .toLowerCase()
+          .split(",");
+        const matches =
+          selectedPlatform === "all" ||
+          platforms.some(function (platform) {
+            return platform.trim().toLowerCase() === selectedPlatform;
+          });
+
+        card.classList.toggle("is-filtered", !matches);
+      });
+    });
+  }
+
   const pacmanGhost = document.querySelector(".pacman-ghost");
 
   if (pacmanGhost && window.matchMedia("(pointer: fine)").matches) {
