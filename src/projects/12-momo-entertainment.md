@@ -10,6 +10,6 @@ technologies:
   - "Events"
   - "Entertainment"
   - "Content Updates"
-liveUrl: "https://www.momoent.com/"
+liveUrl: "https://entmomo.com/"
 ---
 Momo Entertainment provides DJ and MC services, event planning, lighting, and sound and A/V rentals for weddings, corporate events, and private celebrations. I implemented the Webflow design and updated the featured events and artist content.
