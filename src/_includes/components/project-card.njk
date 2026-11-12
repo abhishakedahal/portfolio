@@ -1,4 +1,4 @@
-<article class="work-card">
+<article class="work-card" data-platforms="{{ project.data.technologies | join(',') }}">
   <div>
     <!-- Browser Mockup Frame -->
     <div class="browser-frame">
@@ -35,11 +35,13 @@
       {% if project.data.technologies and project.data.technologies.length > 0 %}
         <div class="tech-pills-row" aria-label="Technologies used">
           {% for tech in project.data.technologies %}
-          <span class="tech-pill{% if tech == 'Webflow' %} tech-pill--webflow{% elif tech == 'WordPress' %} tech-pill--wordpress{% elif tech == 'OpenCart' %} tech-pill--opencart{% endif %}">
+          <span class="tech-pill{% if tech == 'Webflow' %} tech-pill--webflow{% elif tech == 'WordPress' %} tech-pill--wordpress{% elif tech == 'WooCommerce' %} tech-pill--woocommerce{% elif tech == 'OpenCart' %} tech-pill--opencart{% endif %}">
             {% if tech == 'Webflow' %}
               <span class="tech-pill-logo tech-pill-logo--webflow" aria-hidden="true">W</span>
             {% elif tech == 'WordPress' %}
               <span class="tech-pill-logo tech-pill-logo--wordpress" aria-hidden="true">W</span>
+            {% elif tech == 'WooCommerce' %}
+              <span class="tech-pill-logo tech-pill-logo--woocommerce" aria-hidden="true">W</span>
             {% elif tech == 'OpenCart' %}
               <span class="tech-pill-logo tech-pill-logo--opencart" aria-hidden="true">C</span>
             {% endif %}

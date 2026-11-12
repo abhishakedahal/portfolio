@@ -2,7 +2,7 @@
 title: "Nima Rinji Sherpa — Official Portfolio"
 description: "Nima Rinji Sherpa's website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel."
 previewUrl: "nima-ea77c6.webflow.io"
-order: 7
+order: 2
 thumbnail: "/assets/images/projects/project-nima.png"
 thumbnailAlt: "Nima Rinji Sherpa mountaineering portfolio screenshot"
 technologies:
