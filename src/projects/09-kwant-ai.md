@@ -1,8 +1,8 @@
 ---
 title: "Kwant.ai — Workforce Intelligence Platform"
-description: "Kwant.ai is a workforce management and access-control platform for construction jobsites. I implemented new Webflow pages, updated content, refactored the CMS for easier management, developed dynamic animations, and handled SEO optimisation."
+description: "Kwant.ai is a workforce management and access-control platform for construction jobsites. I implemented new Webflow pages, updated content, refactored the CMS for easier management, added access controls to improve security and manage permissions for different teams, developed dynamic animations, and handled SEO optimisation."
 previewUrl: "kwant.ai"
-order: 13
+order: 4
 thumbnail: "/assets/images/projects/project-kwant.png"
 thumbnailAlt: "Kwant.ai AI-powered construction safety platform screenshot"
 technologies:
@@ -13,4 +13,4 @@ technologies:
   - "SEO Optimisation"
 liveUrl: "https://www.kwant.ai/"
 ---
-Kwant.ai is a workforce management and access-control platform for construction jobsites. I implemented new Webflow pages, updated content, refactored the CMS for easier management, developed dynamic animations, and handled SEO optimisation.
+Kwant.ai is a workforce management and access-control platform for construction jobsites. I implemented new Webflow pages, updated content, refactored the CMS for easier management, added access controls to improve security and manage permissions for different teams, developed dynamic animations, and handled SEO optimisation.

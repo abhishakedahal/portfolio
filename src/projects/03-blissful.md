@@ -2,7 +2,7 @@
 title: "Blissful — WooCommerce Theme"
 description: "Blissful is a WooCommerce theme for stores selling gifts, flowers, toys, cakes, and other celebration products. I implemented the design, block patterns, WooCommerce layouts, and the demo website."
 previewUrl: "themegrilldemos.com/blissful"
-order: 7
+order: 6
 thumbnail: "/assets/images/projects/project-blissful.png"
 thumbnailAlt: "Blissful gifts and boutique e-commerce demo screenshot"
 technologies:
