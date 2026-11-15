@@ -45,6 +45,10 @@ async function main() {
       path.basename(file).toLowerCase() === "profile.jpg"
     )
   ));
+  await sharp(path.join(sourceRoot, "profile.jpg"))
+    .resize(96, 96, { fit: "cover", position: "centre" })
+    .png({ compressionLevel: 9 })
+    .toFile(path.join(outputRoot, "favicon-96.png"));
   console.log(`Optimized ${results.length} images`);
   results.forEach((result) => console.log(`- ${result}`));
 }
