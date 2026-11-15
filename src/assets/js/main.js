@@ -56,17 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (window.Lenis && !prefersReducedMotion) {
-    const lenis = new window.Lenis({
-      anchors: true,
-      smoothWheel: true
+    let initialized = false;
+    const initializeLenis = function () {
+      if (initialized || !window.Lenis) return;
+      initialized = true;
+      new window.Lenis({
+        anchors: true,
+        autoRaf: true,
+        smoothWheel: true,
+        syncTouch: false
+      });
+    };
+    ["pointerdown", "wheel", "keydown", "touchstart"].forEach(function (eventName) {
+      window.addEventListener(eventName, initializeLenis, { once: true, passive: true });
     });
-
-    function raf(time) {
-      lenis.raf(time);
-      window.requestAnimationFrame(raf);
-    }
-
-    window.requestAnimationFrame(raf);
+    (window.requestIdleCallback || function (callback) {
+      window.setTimeout(callback, 1500);
+    })(initializeLenis);
   }
 
   if (navToggle && siteNav) {
@@ -127,8 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let pointerY = window.innerHeight / 2;
     let frameRequested = false;
 
+    let ghostBounds = pacmanGhost.getBoundingClientRect();
+
     function updateGhostEyes() {
-      const bounds = pacmanGhost.getBoundingClientRect();
+      const bounds = ghostBounds;
       const centerX = bounds.left + bounds.width / 2;
       const centerY = bounds.top + bounds.height / 2;
       const distance = Math.hypot(pointerX - centerX, pointerY - centerY) || 1;
@@ -143,6 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
         `${(pointerY - centerY) * pupilOffset}px`
       );
       frameRequested = false;
+    }
+
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(function () {
+        ghostBounds = pacmanGhost.getBoundingClientRect();
+      }).observe(pacmanGhost);
     }
 
     document.addEventListener("pointermove", function (event) {

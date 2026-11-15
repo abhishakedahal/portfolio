@@ -1,4 +1,5 @@
 node_modules/
+src/assets/images/optimized/
 _site/
 .cache/
 .DS_Store

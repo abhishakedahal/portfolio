@@ -6,7 +6,7 @@
   "description": "Portfolio of Abhishek Dahal, a web developer with experience building and maintaining websites, working across e-commerce, content and technical implementation.",
   "url": "https://dahalabhishek.com.np",
   "locale": "en_GB",
-  "socialImage": "/assets/images/profile.jpg",
+  "socialImage": "/assets/images/optimized/profile-700.jpg?v=2",
   "author": {
     "name": "Abhishek Dahal",
     "email": "abhishekdahal464@gmail.com",
@@ -21,7 +21,7 @@
     "lead": "Hi. I’m Abhishek, a developer and data science graduate passionate about building useful digital solutions. With experience across WordPress, Webflow, e-commerce, and data analytics, I enjoy solving problems, improving workflows, and turning ideas into real-world applications. I’m driven by curiosity, continuous learning, and the challenge of making technology work better for people.",
     "leadPersonal": "Outside my professional work, I enjoy cycling, hiking, and making music. I also volunteer with a charity that supports vulnerable children by providing opportunities for education and a supportive family environment.",
     "status": "Looking for full-time roles across web and data. Open to relocate.",
-    "profilePhoto": "/assets/images/profile.jpg"
+    "profilePhoto": "/assets/images/optimized/profile-700.jpg?v=2"
   },
   "navigation": [
     {

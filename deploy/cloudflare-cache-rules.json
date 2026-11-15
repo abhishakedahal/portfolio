@@ -1,0 +1,35 @@
+{
+  "rules": [
+    {
+      "description": "Cache versioned static assets for one year",
+      "expression": "(http.host eq \"dahalabhishek.com.np\" and http.request.uri.path.extension in {\"avif\" \"webp\" \"png\" \"jpg\" \"jpeg\" \"svg\" \"css\" \"js\" \"woff\" \"woff2\"})",
+      "action_parameters": {
+        "cache": true,
+        "browser_ttl": {
+          "mode": "override",
+          "default": 31536000
+        },
+        "edge_ttl": {
+          "mode": "override",
+          "default": 31536000
+        }
+      },
+      "action": "set_cache_settings"
+    },
+    {
+      "description": "Always revalidate HTML",
+      "expression": "(http.host eq \"dahalabhishek.com.np\" and http.request.uri.path.extension in {\"html\" \"\"})",
+      "action_parameters": {
+        "cache": true,
+        "browser_ttl": {
+          "mode": "override",
+          "default": 0
+        },
+        "edge_ttl": {
+          "mode": "respect_origin"
+        }
+      },
+      "action": "set_cache_settings"
+    }
+  ]
+}

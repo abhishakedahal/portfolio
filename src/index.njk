@@ -45,14 +45,11 @@ permalink: "/"
     </div>
 
     <div class="hero-photo">
-      <img
-        src="{{ site.hero.profilePhoto }}"
-        alt="Portrait of {{ site.author.name }}"
-        class="hero-profile-image"
-        width="640"
-        height="800"
-        fetchpriority="high"
-      />
+      <picture>
+        <source type="image/avif" srcset="/assets/images/optimized/profile-350.avif?v=2 350w, /assets/images/optimized/profile-700.avif?v=2 700w" sizes="(max-width: 767px) calc(100vw - 2.5rem), 256px">
+        <source type="image/webp" srcset="/assets/images/optimized/profile-350.webp?v=2 350w, /assets/images/optimized/profile-700.webp?v=2 700w" sizes="(max-width: 767px) calc(100vw - 2.5rem), 256px">
+        <img src="/assets/images/optimized/profile-700.jpg?v=2" srcset="/assets/images/optimized/profile-350.jpg?v=2 350w, /assets/images/optimized/profile-700.jpg?v=2 700w" sizes="(max-width: 767px) calc(100vw - 2.5rem), 256px" alt="Portrait of {{ site.author.name }}" class="hero-profile-image" width="394" height="400" fetchpriority="high" decoding="async">
+      </picture>
     </div>
   </div>
 </section>

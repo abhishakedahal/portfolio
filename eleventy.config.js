@@ -48,6 +48,10 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("imageStem", function (imagePath) {
+    return String(imagePath).split("/").pop().replace(/\.[^.]+$/, "");
+  });
+
   // Filter: Get current year for footer copyright
   eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
 

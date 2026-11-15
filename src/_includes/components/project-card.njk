@@ -13,15 +13,12 @@
       </div>
       <div class="browser-screen-wrapper">
         {% if project.data.thumbnail %}
-          <img
-            src="{{ project.data.thumbnail }}"
-            alt="{{ project.data.thumbnailAlt or project.data.title }}"
-            class="browser-screen-img"
-            loading="lazy"
-            width="800"
-            height="450"
-            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'browser-screen-fallback\'>Project Preview</div>';"
-          />
+          {% set imageStem = project.data.thumbnail | imageStem %}
+          <picture>
+            <source type="image/avif" srcset="/assets/images/optimized/projects/{{ imageStem }}-400.avif?v=1 400w, /assets/images/optimized/projects/{{ imageStem }}-680.avif?v=1 680w, /assets/images/optimized/projects/{{ imageStem }}-900.avif?v=1 900w, /assets/images/optimized/projects/{{ imageStem }}-1200.avif?v=1 1200w" sizes="(max-width: 767px) calc(100vw - 3.5rem), (max-width: 1152px) 40vw, 517px">
+            <source type="image/webp" srcset="/assets/images/optimized/projects/{{ imageStem }}-400.webp?v=1 400w, /assets/images/optimized/projects/{{ imageStem }}-680.webp?v=1 680w, /assets/images/optimized/projects/{{ imageStem }}-900.webp?v=1 900w, /assets/images/optimized/projects/{{ imageStem }}-1200.webp?v=1 1200w" sizes="(max-width: 767px) calc(100vw - 3.5rem), (max-width: 1152px) 40vw, 517px">
+            <img src="/assets/images/optimized/projects/{{ imageStem }}-900.jpg?v=1" srcset="/assets/images/optimized/projects/{{ imageStem }}-400.jpg?v=1 400w, /assets/images/optimized/projects/{{ imageStem }}-680.jpg?v=1 680w, /assets/images/optimized/projects/{{ imageStem }}-900.jpg?v=1 900w, /assets/images/optimized/projects/{{ imageStem }}-1200.jpg?v=1 1200w" sizes="(max-width: 767px) calc(100vw - 3.5rem), (max-width: 1152px) 40vw, 517px" alt="{{ project.data.thumbnailAlt or project.data.title }}" class="browser-screen-img" loading="lazy" width="800" height="450" decoding="async">
+          </picture>
         {% else %}
           <div class="browser-screen-fallback">
             Project Preview
@@ -49,6 +46,10 @@
           </span>
           {% endfor %}
         </div>
+      {% endif %}
+
+      {% if project.data.company %}
+        <p class="work-card-company">{{ project.data.company }}</p>
       {% endif %}
 
       <h3 class="work-card-title">
