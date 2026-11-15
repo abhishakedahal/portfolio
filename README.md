@@ -11,6 +11,7 @@ This is my personal portfolio website, designed using **Google Stitch** and buil
 - **True Single-Page Website:** Smooth anchor navigation between `#work`, `#about`, `#experience`, and `#contact`. No separate subpages.
 - **Repeatable Data-Driven Projects:** Project cards in the `#work` grid are generated automatically from structured Markdown files in `src/projects/`.
 - **Zero Heavy Frameworks:** Pure semantic HTML and Plain CSS with no React, Vue, Tailwind or bulky runtime dependencies.
+- **Search-Friendly Metadata:** Canonical URLs, Open Graph/Twitter cards, JSON-LD, `robots.txt`, and an XML sitemap are generated during each build.
 
 ---
 
@@ -59,6 +60,7 @@ Open `src/_data/site.json`:
 - **Skills Matrix:** Edit categories and comma-separated items in the `"skills"` array.
 - **Experience:** Edit the `"experience"` array (company, role, description).
 - **Contact Channels:** `"author.email"`, `"author.linkedIn"`, `"author.github"`
+- **SEO Site Settings:** `"url"` must be the canonical public URL without a trailing slash. `"description"`, `"locale"`, and `"socialImage"` provide the shared search and social metadata.
 
 ### 2. Managing Projects
 
@@ -112,6 +114,8 @@ Compile the production static site into `_site/`:
 ```bash
 npm run build
 ```
+
+The build generates `_site/robots.txt` and `_site/sitemap.xml`. The sitemap currently lists only the homepage because the project Markdown files are collection-only and do not produce public detail pages. If public routes are added, add them to the sitemap template after they have a real permalink.
 
 To preview the compiled site locally:
 

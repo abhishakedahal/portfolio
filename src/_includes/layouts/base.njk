@@ -4,32 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  {# Dynamic Page Title #}
-  <title>{{ site.siteTitle }}</title>
+  {% set pageTitle = title or site.siteTitle %}
+  {% set pageDescription = description or site.description %}
+  {% set pageUrl = site.url ~ (page.url or "/") %}
+  {% set socialImage = (image or site.socialImage) %}
+
+  <title>{{ pageTitle }}</title>
   
   {# Meta Description #}
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{{ pageDescription }}">
   <meta name="author" content="{{ site.author.name }}">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#fcf9f6">
 
   {# Canonical URL #}
-  {% if site.url %}
-    <link rel="canonical" href="{{ site.url }}/">
-  {% endif %}
+  <link rel="canonical" href="{{ pageUrl }}">
+  <link rel="sitemap" type="application/xml" href="{{ site.url }}/sitemap.xml">
 
   {# Open Graph / Social Sharing #}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{{ site.siteTitle }}">
-  <meta property="og:description" content="{{ site.description }}">
-  {% if site.url %}
-    <meta property="og:url" content="{{ site.url }}/">
-  {% endif %}
+  <meta property="og:locale" content="{{ site.locale }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ pageUrl }}">
+  <meta property="og:image" content="{{ site.url }}{{ socialImage }}">
+  <meta property="og:image:alt" content="{{ site.name }} profile image">
 
   {# Twitter Card #}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ site.siteTitle }}">
-  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ socialImage }}">
+  <meta name="twitter:image:alt" content="{{ site.name }} profile image">
 
   {# Google Fonts: Newsreader & Inter #}
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +48,49 @@
 
   {# Minimal Favicon #}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "{{ site.url }}/#person",
+          "name": "{{ site.author.name }}",
+          "url": "{{ site.url }}/",
+          "image": "{{ site.url }}{{ site.socialImage }}",
+          "jobTitle": "{{ site.title }}",
+          "sameAs": [
+            "{{ site.author.linkedIn }}",
+            "{{ site.author.github }}"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website",
+          "url": "{{ site.url }}/",
+          "name": "{{ site.name }}",
+          "description": "{{ site.description }}",
+          "publisher": {
+            "@id": "{{ site.url }}/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ pageUrl }}#webpage",
+          "url": "{{ pageUrl }}",
+          "name": "{{ pageTitle }}",
+          "description": "{{ pageDescription }}",
+          "isPartOf": {
+            "@id": "{{ site.url }}/#website"
+          },
+          "about": {
+            "@id": "{{ site.url }}/#person"
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 <body id="top">
   <a href="#main-content" class="skip-link">Skip to main content</a>

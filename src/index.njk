@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Abhishek Dahal — Web Developer"
+description: "Portfolio of Abhishek Dahal, a web developer and data science graduate building useful digital solutions across WordPress, Webflow, e-commerce, and data analytics."
 permalink: "/"
 ---
 
@@ -46,8 +47,11 @@ permalink: "/"
     <div class="hero-photo">
       <img
         src="{{ site.hero.profilePhoto }}"
-        alt="Portrait"
+        alt="Portrait of {{ site.author.name }}"
         class="hero-profile-image"
+        width="640"
+        height="800"
+        fetchpriority="high"
       />
     </div>
   </div>

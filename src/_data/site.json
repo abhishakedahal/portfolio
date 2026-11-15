@@ -5,6 +5,8 @@
   "siteTitle": "Abhishek Dahal — Web Developer",
   "description": "Portfolio of Abhishek Dahal, a web developer with experience building and maintaining websites, working across e-commerce, content and technical implementation.",
   "url": "https://dahalabhishek.com.np",
+  "locale": "en_GB",
+  "socialImage": "/assets/images/profile.jpg",
   "author": {
     "name": "Abhishek Dahal",
     "email": "abhishekdahal464@gmail.com",
