@@ -3,7 +3,7 @@ title: "SkinCare — Hybrid WooCommerce Theme"
 company: "ThemeGrill"
 description: "SkinCare is a hybrid WooCommerce theme for beauty and cosmetics stores. I implemented fixes, block patterns, product catalogs, and design refinements for beauty and wellness brands."
 previewUrl: "themegrilldemos.com/skincare"
-order: 11
+order: 12
 thumbnail: "/assets/images/projects/project-skincare.png"
 thumbnailAlt: "SkinCare cosmetics and wellness store demo screenshot"
 technologies:
