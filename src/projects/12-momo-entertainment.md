@@ -1,5 +1,6 @@
 ---
 title: "Momo Entertainment — Event Services"
+company: "Pagoda Labs"
 description: "Momo Entertainment provides DJ and MC services, event planning, lighting, and sound and A/V rentals for weddings, corporate events, and private celebrations. I implemented the Webflow design and updated the featured events and artist content."
 previewUrl: "entmomo.com"
 order: 14

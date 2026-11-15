@@ -1,5 +1,6 @@
 ---
 title: "Crisp Stories — Creative Agency"
+company: "Pagoda Labs"
 description: "Crisp Stories is a creative agency that uses storytelling to present its work and services. I redesigned and rebuilt the website from WordPress to Webflow, creating a flexible portfolio and case-study experience."
 previewUrl: "crispstories.com"
 order: 13

@@ -1,8 +1,9 @@
 ---
 title: "Nima Rinji Sherpa — Official Portfolio"
-description: "Nima Rinji Sherpa's website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel."
+company: "Pagoda Labs"
+description: "Nima Rinji Sherpa is a Nepalese mountaineer recognized by Guinness World Records as the youngest person to climb all 14 of the world's 8,000-meter peaks. His website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel."
 previewUrl: "nima-ea77c6.webflow.io"
-order: 11
+order: 7
 thumbnail: "/assets/images/projects/project-nima.png"
 thumbnailAlt: "Nima Rinji Sherpa mountaineering portfolio screenshot"
 technologies:
@@ -12,4 +13,4 @@ technologies:
   - "CMS Collections"
 liveUrl: "https://nima-ea77c6.webflow.io/"
 ---
-Nima Rinji Sherpa's website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel.
+Nima Rinji Sherpa is a Nepalese mountaineer recognized by Guinness World Records as the *youngest person to climb all 14 of the world's 8,000-meter peaks*. His website is a personal portfolio showcasing his mountaineering career and the peaks he has climbed. I built the Webflow site and developed the interactive mountain-climb carousel.

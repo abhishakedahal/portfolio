@@ -1,5 +1,6 @@
 ---
 title: "EvoStore — E-commerce Website"
+company: "Pagoda Labs"
 description: "EvoStore is one of Nepal's biggest platforms for official Apple products and other electronic gadgets. I contributed to the website redesign and overhaul, maintained product listings with accurate information and descriptions, integrated payment systems and third-party plugins to enhance site functionality, and handled SEO optimisation."
 previewUrl: "evostore.com.np"
 order: 3

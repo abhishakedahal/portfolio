@@ -1,5 +1,6 @@
 ---
 title: "Kwant.ai — Workforce Intelligence Platform"
+company: "Pagoda Labs"
 description: "Kwant.ai is a workforce management and access-control platform for construction jobsites. I implemented new Webflow pages, updated content, refactored the CMS for easier management, added access controls to improve security and manage permissions for different teams, developed dynamic animations, and handled SEO optimisation."
 previewUrl: "kwant.ai"
 order: 4
