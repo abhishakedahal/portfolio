@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   // Passthrough static assets
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/.htaccess": ".htaccess" });
+  eleventyConfig.addPassthroughCopy({ "src/.well-known": ".well-known" });
 
   // Watch CSS and JS assets for changes during development
   eleventyConfig.addWatchTarget("src/assets/css/");
