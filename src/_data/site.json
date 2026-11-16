@@ -26,19 +26,19 @@
   "navigation": [
     {
       "label": "Work",
-      "url": "#work"
+      "url": "/#work"
     },
     {
       "label": "About",
-      "url": "#about"
+      "url": "/#about"
     },
     {
       "label": "Education",
-      "url": "#education"
+      "url": "/#education"
     },
     {
       "label": "Experience",
-      "url": "#experience"
+      "url": "/#experience"
     }
   ],
   "about": {
